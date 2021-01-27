@@ -1,0 +1,40 @@
+{
+    "settings" : {
+      "number_of_shards" : 10,
+      "analysis": {
+        "normalizer": {
+          "normalizer_lowercase": {
+            "type": "custom",
+            "char_filter": [],
+            "filter": ["lowercase"]
+          }
+        }
+      }
+    },
+    "mappings" : {
+      "properties" : {
+        "data_type"       : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "data_source"     : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "data_seq"        : {"type": "long"},
+        "time_insert"     : {"type": "date"},
+        "time_source"     : {"type": "date"},
+        "url"             : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "domain"          : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "ip"              : {"type": "ip"},
+        "ip_geo"          : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "ip_org"          : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "port"            : {"type": "long"},
+        "http_code"       : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "md5"             : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "av"              : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "hack_company"    : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "hack_kind"       : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "hack_seq_detail" : {"type": "long"},
+        "hack_seq"        : {"type": "long"},
+        "hack_signature"  : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "hack_category"   : {"type": "keyword", "normalizer": "normalizer_lowercase"},
+        "hack_raw_data"   : {"type": "keyword", "normalizer": "normalizer_lowercase"}
+      }
+    }
+  }
+  

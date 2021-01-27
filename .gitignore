@@ -1,0 +1,6 @@
+.vscode/
+ChatExport_20_09_2019/
+RESULT/
+hinet.log
+venv/
+*.pyc
